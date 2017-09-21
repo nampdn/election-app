@@ -23,6 +23,6 @@ export default {
 <style lang="scss">
 @import "./assets/scss/main.scss";
 #main {
-  margin-top: 125px;
+  margin-top: 100px;
 }
 </style>

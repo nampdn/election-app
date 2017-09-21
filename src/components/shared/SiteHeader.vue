@@ -55,4 +55,9 @@ export default {
     font-size: 1.5em;
     font-weight: 700;
   }
+
+  .form-group {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 </style>
