@@ -36,6 +36,7 @@ export default {
       if (!confirmed) {
         return
       }
+      this.totalElectors = ''
       this.$store.dispatch('deleteAllData')
     }
   }

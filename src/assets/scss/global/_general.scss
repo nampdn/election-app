@@ -16,12 +16,10 @@ h6 {
 .container {
   max-width: $main-width;
   margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
   &--flex {
     display: flex;
     align-items: center;
-  }
-  @media screen and (max-width: $main-width) {
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }

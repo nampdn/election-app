@@ -59,15 +59,18 @@ export default {
   .container {
     position: relative;
     .left {
-      width: 55%;
+      width: 60%;
       padding-right: 50px;
       box-sizing: border-box;
     }
     .right {
-      position: absolute;
-      width: 45%;
+      position: fixed;
+      width: 40%;
       right: 0;
-      top: 0;
+      top: 63px;
+      background: #efefef;
+      height: 100%;
+      box-sizing: border-box;
     }
   }
 </style>
