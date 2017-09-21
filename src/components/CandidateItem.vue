@@ -83,7 +83,7 @@ export default {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid $color--gray;
     &:last-child {
       border-bottom: none;

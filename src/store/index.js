@@ -25,7 +25,7 @@ export default new Vuex.Store({
         name: name,
         votes: 0
       }
-      candidate.id = state.candidates ? state.candidates.length + 1 : 1
+      candidate.id = state.candidates ? state.candidates.length : 0
       commit('ADD_CANDIDATE', candidate)
     },
     updateCandidate ({commit}, payload) {
@@ -66,6 +66,11 @@ export default new Vuex.Store({
     DELETE_CANDIDATE (state, payload) {
       state.candidates = _.remove(state.candidates, (item) => {
         return item.id !== payload.id
+      })
+
+      // reset candidate id
+      state.candidates.forEach((candidate, index) => {
+        candidate.id = index
       })
       localStorage.setItem('candidates', JSON.stringify(state.candidates))
     },
