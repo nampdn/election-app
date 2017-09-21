@@ -50,6 +50,11 @@ export default new Vuex.Store({
     },
     SET_TOTAL_ELECTORS (state, total) {
       state.totalElectors = total
+
+      // reset candidates passed
+      state.candidates.forEach((candidate, index) => {
+        candidate.passed = candidate.votes / total >= 0.5
+      })
       localStorage.setItem('total_electors', total)
     },
     ADD_CANDIDATE (state, candidate) {

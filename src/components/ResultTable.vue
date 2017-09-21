@@ -23,7 +23,7 @@
         <td v-text="index + 1"></td>
         <td class="name" nowrap v-text="candidate.name"></td>
         <td class="votes" v-text="candidate.votes"></td>
-        <td class="percent">{{ candidate.votes / totalElectors | votesPercent }}</td>
+        <td class="percent">{{ candidate.votes | votesInPercent(totalElectors) }}</td>
       </tr>
     </tbody>
   </table>
@@ -57,8 +57,11 @@
     methods: {
     },
     filters: {
-      votesPercent (percent) {
-        return (percent * 100).toFixed(2) + '%'
+      votesInPercent (votes, total) {
+        if (total === 0) {
+          return '0.00%'
+        }
+        return (votes * 100 / total).toFixed(2) + '%'
       }
     }
   }

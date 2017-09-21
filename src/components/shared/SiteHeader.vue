@@ -4,8 +4,9 @@
       <router-link :to="{ name: 'home' }" class="brand">Bầu Cử BĐH</router-link>
 
       <div class="form-group">
+        Tổng số phiếu bầu
         <input type="text" class="total-electors" 
-              placeholder="Tổng số phiếu bầu"
+              placeholder="0"
               v-model="totalElectors">  
       </div>
 
@@ -59,5 +60,10 @@ export default {
   .form-group {
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 700;
+    input {
+      min-width: auto;
+      width: 50px;
+    }
   }
 </style>
