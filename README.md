@@ -1,6 +1,10 @@
 # election-app
 
-> A Vue.js project
+> Simple election app for group of young people at my church.
+
+## How it works
+
+Updating...
 
 ## Build Setup
 
