@@ -2,7 +2,7 @@
 
 Simple election app for group of young people at my church.
 
-![preview app](https://i.imgur.com/jBQbkQ8.png)
+![preview image](https://i.imgur.com/aVKhWut.png)
 
 ## How it works
 
