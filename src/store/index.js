@@ -79,6 +79,9 @@ export default new Vuex.Store({
         return item.id === id
       })
       state.candidates[index].votes += 1
+      if (state.candidates[index].votes >= state.totalElectors / 2) {
+        state.candidates[index].passed = true
+      }
       localStorage.setItem('candidates', JSON.stringify(state.candidates))
     },
     VOTE_DOWN (state, id) {
@@ -89,6 +92,9 @@ export default new Vuex.Store({
         return
       }
       state.candidates[index].votes -= 1
+      if (state.candidates[index].votes < state.totalElectors / 2) {
+        state.candidates[index].passed = false
+      }
       localStorage.setItem('candidates', JSON.stringify(state.candidates))
     }
   },
