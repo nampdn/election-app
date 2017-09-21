@@ -1,0 +1,19 @@
+.form-group {
+  margin: 15px 0;
+  label {
+    display: block;
+    font-weight: 700;
+  }
+
+  input {
+    outline: none;
+    border: 1px solid $color--gray;
+    padding: 7px 10px;
+    min-width: 200px;
+    font-family: inherit;
+    font-size: inherit;
+    &:focus {
+      border-color: $color--gray-text;
+    }
+  }
+}

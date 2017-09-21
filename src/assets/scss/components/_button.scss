@@ -1,0 +1,32 @@
+.button {
+  background-color: $color--dark;
+  color: #fff;
+  border: none;
+  padding: 7px 10px;
+  font-weight: 700;
+  outline: none;
+  font-size: 16px;
+  border: 1px solid $color--dark;
+  cursor: pointer;
+  font-family: inherit;
+  &:hover {
+    background-color: $color--primary;
+    border-color: $color--primary;
+  }
+  // reset ladda styles
+  &.ladda-button {
+    border-radius: 0;
+  }
+  &--primary {
+    background-color: $color--primary;
+    border-color: $color--primary;
+    &:hover {
+      background-color: $color--dark;
+      border-color: $color--dark;
+    }
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .3;
+  }
+}

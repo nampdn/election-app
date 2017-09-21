@@ -1,0 +1,24 @@
+/* HEADER */
+#site-header {
+  border-bottom: 1px solid $color--gray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  .container--flex {
+    justify-content: space-between;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: $color--dark;
+  }
+  .header-menu {
+    a {
+      color: $color--gray-text;
+    }
+    a:hover {
+      color: $color--dark;
+    }
+  }
+}
