@@ -20,5 +20,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .candidate-list {
+    flex: 1;
+    overflow-y: auto;
+    height: 100%;
+    padding: 20px;
+    .candidate-item:first-child {
+      padding-top: 0;
+    }
+  }
 </style>
 

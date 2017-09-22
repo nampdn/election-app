@@ -45,14 +45,6 @@ export default {
 
 
 <style lang="scss" scoped>
-  #site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
-  }
-
   .total-electors {
     font-size: 1.5em;
     font-weight: 700;

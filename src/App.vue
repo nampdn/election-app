@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <site-header></site-header>
-    <main id="main">
-      <router-view></router-view>
-    </main>
-    <site-footer></site-footer>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -21,8 +18,13 @@ export default {
 </script>
 
 <style lang="scss">
-@import "./assets/scss/main.scss";
-#main {
-  margin-top: 100px;
-}
+  @import "./assets/scss/main.scss";
+  body, html {
+    height: 100%;
+  }
+  #app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
 </style>
