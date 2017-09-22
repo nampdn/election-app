@@ -63,6 +63,9 @@
       padding: 2px 10px;
       font-size: 22px;
     }
+    th {
+      font-size: 18px;
+    }
     td {
       font-weight: 700;
       &.name {
