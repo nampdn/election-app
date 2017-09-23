@@ -4,9 +4,14 @@ Simple election app for group of young people at my church.
 
 ![preview image](https://i.imgur.com/Bn2Lzgb.png)
 
-## How it works
+## Features
 
-Updating...
+- Add/Edit/Delete candidate
+- Vote up
+- Vote down
+- Results table: list all the candidates with name|votes|percent, filters by all and passed candidates
+- Delete data
+- Localization
 
 ## Build Setup
 
@@ -33,4 +38,6 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Todos
+
+- [ ] Build app for mac, linux, windows by Electron
