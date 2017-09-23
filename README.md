@@ -12,6 +12,7 @@ Simple election app for group of young people at my church.
 - Results table: list all the candidates with `name | votes | percent`, filters by `all` and `passed` (who won haft of ballots) candidates
 - Delete data
 - Localization
+- Offline mode (Using Vue pwa template)
 
 ## Build Setup
 
