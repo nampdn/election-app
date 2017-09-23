@@ -6,11 +6,15 @@
     </div><!-- /.panel--left -->
     <div class="panel panel--right">
       <div class="filters-header">
-        <strong>Lọc: </strong>
+        <strong>{{ t('filter') }}:&nbsp;</strong>
         <nav class="filters">
-          <a href="#" :class="{ 'active': filter === 'all' }" @click.prevent="filter = 'all'">Tất cả</a>
+          <a href="#" 
+            :class="{ 'active': filter === 'all' }" 
+            @click.prevent="filter = 'all'">{{ t('filter_all') }}</a>
           |
-          <a href="#" :class="{ 'active': filter === 'pass' }" @click.prevent="filter = 'pass'">Quá bán</a>
+          <a href="#" 
+            :class="{ 'active': filter === 'pass' }" 
+            @click.prevent="filter = 'pass'">{{ t('filter_pass') }}</a>
         </nav>
       </div>
       <result-table :results="filteredResults"></result-table>

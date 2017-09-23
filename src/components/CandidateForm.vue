@@ -2,11 +2,11 @@
   <form class="candidate-form">
     <div class="form-group">
       <input type="text" 
-            placeholder="Tên ứng viên"
+            :placeholder="t('candidate_name')"
             class="candidate-form__name"
             v-model="candidateName"
             @keypress.enter.prevent="addCandidate">
-      <button class="candidate-form__add button" @click.prevent="addCandidate">Thêm</button>
+      <button class="candidate-form__add button" @click.prevent="addCandidate">{{ t('candidate_add') }}</button>
     </div>
   </form><!-- /.candidate-form -->
 </template>

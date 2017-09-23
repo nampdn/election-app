@@ -48,7 +48,7 @@ export default {
       let name = input.value.trim()
       if (name === '') {
         // Delete candidate
-        let confirmed = confirm('Nếu để trống đồng nghĩa với xóa ứng viên này. Bạn chắc chứ?')
+        let confirmed = confirm(this.$t('candidate_delete_notice'))
         if (!confirmed) {
           return
         }

@@ -4,8 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
+import TranslatePlugin from './localization'
 
 Vue.config.productionTip = false
+
+Vue.use(TranslatePlugin, {
+  default: 'en',
+  req: require.context('./lang', true, /\.js$/)
+})
 
 /* eslint-disable no-new */
 new Vue({

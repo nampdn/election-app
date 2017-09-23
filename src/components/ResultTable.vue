@@ -4,9 +4,9 @@
       <thead>
         <tr>
           <th>#</th>
-          <th>Họ & Tên</th>
-          <th><a href="#" class="sort-header" @click.prevent="key = 'sort'">Số phiếu</a></th>
-          <th><a href="#" class="sort-header" @click.prevent="key = 'sort'">Phần trăm</a></th>
+          <th>{{ t('column_name') }}</th>
+          <th><a href="#" class="sort-header" @click.prevent="key = 'sort'">{{ t('column_votes') }}</a></th>
+          <th><a href="#" class="sort-header" @click.prevent="key = 'sort'">{{ t('column_percent') }}</a></th>
         </tr>
       </thead>
 

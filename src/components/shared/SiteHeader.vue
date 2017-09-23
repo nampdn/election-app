@@ -4,14 +4,18 @@
       <router-link :to="{ name: 'home' }" class="brand">Bầu Cử BĐH</router-link>
 
       <div class="form-group">
-        Tổng số phiếu bầu
+        {{ t('total_electors') }}
         <input type="text" class="total-electors" 
               placeholder="0"
               v-model="totalElectors">  
       </div>
 
       <nav class="header-menu">
-        <button class="button" @click.prevent="deleteAllData">Xóa dữ liệu</button>
+        <button class="button" @click.prevent="deleteAllData">{{ t('delete_data') }}</button>
+        <span class="lang-switcher">
+          <a href="#" @click.prevent="changeLang('vi')" :class="{ 'active': lang === 'vi' }">{{ t('vi') }}</a>
+          <a href="#" @click.prevent="changeLang('en')" :class="{ 'active': lang === 'en' }">{{ t('en') }}</a>
+        </span>
       </nav>
     </div>
   </header><!-- ./#site-header -->
@@ -21,7 +25,8 @@
 export default {
   data () {
     return {
-      totalElectors: this.$store.getters.totalElectors
+      totalElectors: this.$store.getters.totalElectors,
+      lang: 'en'
     }
   },
   watch: {
@@ -32,12 +37,16 @@ export default {
   },
   methods: {
     deleteAllData () {
-      let confirmed = confirm('Bạn có chắc xóa toàn bộ dữ liệu?')
+      let confirmed = confirm(this.t('delete_data_notice'))
       if (!confirmed) {
         return
       }
       this.totalElectors = ''
       this.$store.dispatch('deleteAllData')
+    },
+    changeLang (lang) {
+      this.lang = lang
+      this.$translate.setLang(lang)
     }
   }
 }
@@ -57,6 +66,14 @@ export default {
     input {
       min-width: auto;
       width: 50px;
+    }
+  }
+
+  .lang-switcher {
+    padding-left: 20px;
+    .active {
+      font-weight: 700;
+      color: $color--dark !important;
     }
   }
 </style>
