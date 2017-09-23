@@ -84,6 +84,9 @@ export default new Vuex.Store({
         return item.id === id
       })
       state.candidates[index].votes += 1
+      if (state.candidates[index].votes >= state.totalElectors) {
+        state.candidates[index].votes = state.totalElectors
+      }
       if (state.candidates[index].votes >= state.totalElectors / 2) {
         state.candidates[index].passed = true
       }
