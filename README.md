@@ -6,10 +6,10 @@ Simple election app for group of young people at my church.
 
 ## Features
 
-- Add/Edit/Delete candidate
+- Add/edit/delete candidate
 - Vote up
 - Vote down
-- Results table: list all the candidates with name|votes|percent, filters by all and passed candidates
+- Results table: list all the candidates with `name | votes | percent`, filters by `all` and `passed` (who won haft of ballots) candidates
 - Delete data
 - Localization
 
