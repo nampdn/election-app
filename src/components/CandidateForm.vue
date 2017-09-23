@@ -6,7 +6,7 @@
             class="candidate-form__name"
             v-model="candidateName"
             @keypress.enter.prevent="addCandidate">
-      <button class="candidate-form__add button">Thêm</button>
+      <button class="candidate-form__add button" @click.prevent="addCandidate">Thêm</button>
     </div>
   </form><!-- /.candidate-form -->
 </template>
