@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const Election = () => import('@/components/pages/Election')
+const Election = () => import(/* webpackChunkName: "election" */ '@/components/pages/Election')
 
 Vue.use(Router)
 
