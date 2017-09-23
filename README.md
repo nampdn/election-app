@@ -13,7 +13,7 @@ Updating...
 ``` bash
 # install dependencies
 npm install
-https://i.imgur.com/6uUmLjq.png
+
 # serve with hot reload at localhost:8081
 npm run dev
 
