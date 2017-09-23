@@ -2,7 +2,7 @@
 
 Simple election app for group of young people at my church.
 
-![preview image](https://i.imgur.com/aVKhWut.png)
+![preview image](https://i.imgur.com/6uUmLjq.png)
 
 ## How it works
 
@@ -13,7 +13,7 @@ Updating...
 ``` bash
 # install dependencies
 npm install
-
+https://i.imgur.com/6uUmLjq.png
 # serve with hot reload at localhost:8081
 npm run dev
 
