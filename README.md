@@ -1,6 +1,6 @@
 # Election App
 
-Simple election app for group of young people at my church.
+Simple election app for youth at my church.
 
 ![preview image](https://i.imgur.com/Bn2Lzgb.png)
 
