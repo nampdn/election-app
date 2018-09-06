@@ -25,7 +25,7 @@
 export default {
   data () {
     return {
-      totalElectors: this.$store.getters.totalElectors,
+      totalElectors: this.$store.getters.totalElectors || 1,
       lang: 'en'
     }
   },
