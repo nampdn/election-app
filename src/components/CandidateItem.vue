@@ -146,6 +146,12 @@ export default {
     &__actions {
       padding-left: 40px;
       margin-left: auto;
+      .button:disabled {
+        &:hover {
+          background: transparent;
+          color: initial;
+        }
+      }
       .button--vote-down {
         background-color: transparent;
         border: 1px solid $color--dark;
