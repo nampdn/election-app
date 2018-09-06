@@ -77,7 +77,6 @@
     }
     td {
       font-weight: 700;
-      background-color: #fff;
       &.name {
         font-weight: normal;
       }
@@ -98,7 +97,7 @@
     }
     tbody {
       tr {
-        background-color: $color--gray;
+        background-color: #fff;
         &.pass {
           background-color: $color--success;
         }
