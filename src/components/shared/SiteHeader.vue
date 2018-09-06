@@ -6,7 +6,7 @@
       <div class="form-group">
         {{ t('total_electors') }}
         <input type="text" class="total-electors"
-              placeholder="0"
+              placeholder="1"
               v-model="totalElectors">
       </div>
 
@@ -33,6 +33,7 @@ export default {
   watch: {
     totalElectors (newVal, oldVal) {
       let total = isNaN(parseInt(newVal)) ? 0 : parseInt(newVal)
+      this.totalElectors = total
       this.$store.dispatch('setTotalElectors', parseInt(total))
     }
   },
