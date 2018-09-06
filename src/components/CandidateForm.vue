@@ -1,7 +1,7 @@
 <template>
   <form class="candidate-form">
     <div class="form-group">
-      <input type="text" 
+      <input type="text"
             :placeholder="t('candidate_name')"
             class="candidate-form__name"
             v-model="candidateName"
@@ -41,6 +41,16 @@ export default {
     box-sizing: border-box;
     input {
       flex: 1 1 auto;
+    }
+  }
+  .candidate-form {
+    &__name {
+      border-radius: 4px 0 0 4px;
+    }
+    &__add {
+      border-radius: 0 4px 4px 0;
+      position: relative;
+      left: -2px;
     }
   }
 </style>

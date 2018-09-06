@@ -5,9 +5,9 @@
 
       <div class="form-group">
         {{ t('total_electors') }}
-        <input type="text" class="total-electors" 
+        <input type="text" class="total-electors"
               placeholder="0"
-              v-model="totalElectors">  
+              v-model="totalElectors">
       </div>
 
       <nav class="header-menu">
@@ -71,6 +71,9 @@ export default {
 
   .lang-switcher {
     padding-left: 20px;
+    a {
+      margin: 0 5px;
+    }
     .active {
       font-weight: 700;
       color: $color--dark !important;

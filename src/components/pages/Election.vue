@@ -8,18 +8,18 @@
       <div class="filters-header">
         <strong>{{ t('filter') }}:&nbsp;</strong>
         <nav class="filters">
-          <a href="#" 
-            :class="{ 'active': filter === 'all' }" 
+          <a href="#"
+            :class="{ 'active': filter === 'all' }"
             @click.prevent="filter = 'all'">{{ t('filter_all') }}</a>
           |
-          <a href="#" 
-            :class="{ 'active': filter === 'pass' }" 
+          <a href="#"
+            :class="{ 'active': filter === 'pass' }"
             @click.prevent="filter = 'pass'">{{ t('filter_pass') }}</a>
         </nav>
       </div>
       <result-table :results="filteredResults"></result-table>
     </div>
-  </main>  
+  </main>
 </template>
 
 <script>
@@ -57,8 +57,9 @@ export default {
 <style lang="scss" scoped>
   #content {
     display: flex;
+    height: 100%;
   }
-  
+
   .panel {
     display: flex;
     flex-flow: column nowrap;

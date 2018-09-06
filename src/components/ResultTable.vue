@@ -18,6 +18,15 @@
           <td class="percent">{{ candidate.votes | votesInPercent(totalElectors) }}</td>
         </tr>
       </tbody>
+
+      <tfoot>
+        <tr>
+          <th>#</th>
+          <th>{{ t('column_name') }}</th>
+          <th><a href="#" class="sort-header" @click.prevent="key = 'sort'">{{ t('column_votes') }}</a></th>
+          <th><a href="#" class="sort-header" @click.prevent="key = 'sort'">{{ t('column_percent') }}</a></th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </template>
@@ -60,7 +69,7 @@
       border-right: 1px solid $color--gray;
       border-top: 1px solid $color--gray;
       text-align: left;
-      padding: 2px 10px;
+      padding: 5px 10px;
       font-size: 22px;
     }
     th {
@@ -68,17 +77,23 @@
     }
     td {
       font-weight: 700;
+      background-color: #fff;
       &.name {
         font-weight: normal;
       }
     }
-    thead {
+    thead, tfoot {
       tr {
-        background-color: $color--dark;
-        color: #fff;
+        background-color: #fff;
+        color: $color--dark;
       }
       .sort-header {
-        color: #fff;
+        color: $color--dark;
+      }
+    }
+    thead {
+      th {
+        border-bottom: 2px solid $color--gray;
       }
     }
     tbody {

@@ -1,18 +1,18 @@
 <template>
   <div class="candidate-item">
     <span class="candidate-item__order">#{{ order + 1 }}</span>
-    
+
     <div class="form-group" v-if="editing">
       <input type="text"
             :value="data.name"
             v-focus="editing"
-            @keyup.enter="update($event)"     
-            @keyup.esc="editing = false" 
+            @keyup.enter="update($event)"
+            @keyup.esc="editing = false"
       >
     </div>
 
-    <span class="candidate-item__name" 
-          v-text="data.name" 
+    <span class="candidate-item__name"
+          v-text="data.name"
           @click.prevent="editing = true"
           v-if="!editing"></span>
 
