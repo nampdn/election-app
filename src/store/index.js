@@ -43,6 +43,7 @@ export default new Vuex.Store({
   },
   mutations: {
     DELETE_ALL_DATA (state) {
+      state.candidates = []
       localStorage.setItem('candidates', [])
       localStorage.setItem('total_electors', 1)
     },
