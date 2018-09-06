@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import swal from 'sweetalert2'
 export default {
   data () {
     return {
@@ -37,12 +38,26 @@ export default {
   },
   methods: {
     deleteAllData () {
-      let confirmed = confirm(this.t('delete_data_notice'))
-      if (!confirmed) {
-        return
-      }
-      this.totalElectors = ''
-      this.$store.dispatch('deleteAllData')
+      swal({
+        title: this.t('delete_data_notice'),
+        text: this.t('delete_data_notice_desc'),
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: this.t('confirm_button_text'),
+        cancelButtonText: this.t('cancel_button_text')
+      }).then((result) => {
+        if (result.value) {
+          this.totalElectors = ''
+          this.$store.dispatch('deleteAllData')
+          swal(
+            this.t('deleted_text'),
+            '',
+            'success'
+          )
+        }
+      })
     },
     changeLang (lang) {
       this.lang = lang

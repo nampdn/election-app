@@ -28,6 +28,7 @@
 </template>
 
 <script>
+import swal from 'sweetalert2'
 export default {
   props: {
     data: {
@@ -49,11 +50,25 @@ export default {
       let name = input.value.trim()
       if (name === '') {
         // Delete candidate
-        let confirmed = confirm(this.$t('candidate_delete_notice'))
-        if (!confirmed) {
-          return
-        }
-        this.$store.dispatch('deleteCandidate', { id: this.data.id, name: name })
+        swal({
+          title: '',
+          text: this.t('candidate_delete_notice'),
+          type: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: this.t('confirm_button_text'),
+          cancelButtonText: this.t('cancel_button_text')
+        }).then((result) => {
+          if (result.value) {
+            this.$store.dispatch('deleteCandidate', { id: this.data.id, name: name })
+            swal(
+              this.t('deleted_text'),
+              '',
+              'success'
+            )
+          }
+        })
       } else {
         // Update candidate
         this.$store.dispatch('updateCandidate', { id: this.data.id, name: name })

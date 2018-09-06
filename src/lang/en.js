@@ -12,5 +12,9 @@ module.exports = {
   candidate_delete_notice: 'By leaving empty this field, you agree to delete it. Are you sure?',
   total_electors: 'Total electors',
   delete_data: 'Delete data',
-  delete_data_notice: 'Do you want to delete all data?'
+  delete_data_notice: 'Do you want to delete all data?',
+  delete_data_notice_desc: 'You won\'t be able to revert this!',
+  confirm_button_text: 'OK',
+  cancel_button_text: 'Cancel',
+  deleted_text: 'Deleted!'
 }
