@@ -6,6 +6,7 @@
       <input type="text"
             :value="data.name"
             v-focus="editing"
+            v-click-outside="outside"
             @keyup.enter="update($event)"
             @keyup.esc="editing = false"
       >
@@ -64,6 +65,12 @@ export default {
     },
     voteDown (id) {
       this.$store.dispatch('voteDown', id)
+    },
+    outside (e) {
+      if (e.target.className === 'candidate-item__name') {
+        return
+      }
+      this.editing = false
     }
   },
   directives: {
@@ -72,6 +79,25 @@ export default {
         context.$nextTick(() => {
           el.focus()
         })
+      }
+    },
+    'click-outside': {
+      bind (el, binding, vNode) {
+        if (typeof binding.value !== 'function') {
+          console.warn(`${binding.express} is not a function`)
+        }
+        const bubble = binding.modifiers.bubble
+        const handler = (e) => {
+          if (bubble || (!el.contains(e.target) && el !== e.target)) {
+            binding.value(e)
+          }
+        }
+        el.__vueClickOutside__ = handler
+        document.addEventListener('click', handler)
+      },
+      unbind (el, binding) {
+        document.removeEventListener('click', el.__vueClickOutside__)
+        el.__vueClickOutside__ = null
       }
     }
   }
